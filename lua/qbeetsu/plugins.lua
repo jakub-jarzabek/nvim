@@ -62,6 +62,19 @@ use{
 	"SmiteshP/nvim-gps",
 	requires = "nvim-treesitter/nvim-treesitter"
 }
+
+  -- Zen Model
+use {
+  "folke/zen-mode.nvim",
+  config = function()
+    require("zen-mode").setup {
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
+    }
+  end
+}
+
   -- Colorschemes
   use "morhetz/gruvbox"
 
@@ -73,6 +86,7 @@ use{
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
+  use {'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'}
   use "hrsh7th/cmp-buffer" -- buffer completions
   use "hrsh7th/cmp-path" -- path completions
   use "hrsh7th/cmp-cmdline" -- cmdline completions
@@ -80,12 +94,15 @@ use{
   use "hrsh7th/cmp-nvim-lsp"
   use "L3MON4D3/LuaSnip" --snippet engine
   use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
-
+  use 'karb94/neoscroll.nvim'
   -- LSP
   use "neovim/nvim-lspconfig" -- enable LSP
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer
   use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
+
+  -- Copilot
+  use "github/copilot.vim"
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
