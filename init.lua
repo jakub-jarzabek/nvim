@@ -23,4 +23,5 @@ require "qbeetsu.whichkey"
 require "qbeetsu.feline"
 require "qbeetsu.tabnine"
 require "qbeetsu.smoothscroll"
+require "qbeetsu.copilot"
 
