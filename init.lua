@@ -24,4 +24,5 @@ require "qbeetsu.feline"
 require "qbeetsu.tabnine"
 require "qbeetsu.smoothscroll"
 require "qbeetsu.copilot"
+require "qbeetsu.gps"
 
