@@ -134,10 +134,30 @@ components.active[1][2] = {
   end,
   right_sep = ' '
 }
+
+-- Trim Helper
+function trimPath(path)
+  count = 0
+  index = 0
+  strLen = string.len(path)
+  for i=strLen,0,-1 do
+      if(string.sub(path,i,i)=='/') then
+        count = count+1
+        if(count==3) then
+          index = i
+        end
+      end
+  end
+  if (count>3) then
+    return '[...]'.. string.sub(path,index,strLen)
+  end
+  return path
+end
+
 -- filename
 components.active[1][3] = {
   provider = function()
-    return vim.fn.expand("%:F")
+    return trimPath(vim.fn.expand("%:F"))
   end,
   hl = {
     fg = 'white',
@@ -155,10 +175,10 @@ components.active[1][3] = {
   }
 
 }
+
 -- nvimGps
 components.active[1][4] = {
   provider = function() return gps.get_location() end,
-
   enabled = function() return gps.is_available() end,
   hl = {
     fg = 'white',
