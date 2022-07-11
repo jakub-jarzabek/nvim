@@ -62,7 +62,7 @@ return packer.startup(function(use)
     "SmiteshP/nvim-gps",
     requires = "nvim-treesitter/nvim-treesitter"
   }
-
+use 'norcalli/nvim-colorizer.lua'
   -- Zen Model
 use {
   "folke/zen-mode.nvim",
@@ -74,9 +74,13 @@ use {
     }
   end
 }
-
+  use "glepnir/zephyr-nvim"
+  use "prettier/vim-prettier"
   -- Colorschemes
-  use "morhetz/gruvbox"
+ use 'shaunsingh/nord.nvim'
+ use "morhetz/gruvbox"
+
+  use "dracula/vim"
 
   -- Transparent BackGround
   use "xiyaowong/nvim-transparent"
@@ -102,8 +106,8 @@ use {
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
 
   -- Copilot
-  use "github/copilot.vim"
-
+  -- use "github/copilot.vim"
+  use "lmburns/kimbox"
   -- Telescope
   use "nvim-telescope/telescope.nvim"
 
