@@ -87,10 +87,10 @@ use {
 
   -- Status line
   use "feline-nvim/feline.nvim"
-
+use 'shaunsingh/moonlight.nvim'
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
-  use {'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'}
+  --[[ use {'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'} ]]
   use "hrsh7th/cmp-buffer" -- buffer completions
   use "hrsh7th/cmp-path" -- path completions
   use "hrsh7th/cmp-cmdline" -- cmdline completions
@@ -104,12 +104,18 @@ use {
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer
   use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
-
+  use {
+      "williamboman/mason.nvim",
+      "williamboman/mason-lspconfig.nvim",
+      "neovim/nvim-lspconfig",
+  }
   -- Copilot
-  -- use "github/copilot.vim"
+  use "github/copilot.vim"
   use "lmburns/kimbox"
   -- Telescope
   use "nvim-telescope/telescope.nvim"
+  use "tjdevries/colorbuddy.vim"
+  use "bkegley/gloombuddy"
 
   -- Treesitter
   use {
@@ -120,6 +126,12 @@ use {
 
   -- Git
   use "lewis6991/gitsigns.nvim"
+  use "LunarVim/vim-solidity"
+  use 'Mofiqul/dracula.nvim'
+use {
+    'glacambre/firenvim',
+    run = function() vim.fn['firenvim#install'](0) end 
+}
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

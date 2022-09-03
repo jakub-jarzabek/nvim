@@ -14,8 +14,8 @@ null_ls.setup({
 		formatting.prettier,
 		formatting.black.with({ extra_args = { "--fast" } }),
 		formatting.stylua,
-	    formatting.json_tool,
-    diagnostics.eslint
-    -- diagnostics.flake8
-	},
+		formatting.json_tool,
+		diagnostics.eslint,
+		diagnostics.solhint
+	}
 })
