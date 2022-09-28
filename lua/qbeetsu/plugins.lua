@@ -74,6 +74,7 @@ use {
     }
   end
 }
+  use 'maxmx03/FluoroMachine.nvim'
   use "glepnir/zephyr-nvim"
   use "prettier/vim-prettier"
   -- Colorschemes
@@ -84,7 +85,13 @@ use {
 
   -- Transparent BackGround
   use "xiyaowong/nvim-transparent"
+  use 'simrat39/rust-tools.nvim'
+  use 'nvim-lua/plenary.nvim'
+  use 'mfussenegger/nvim-dap'
 
+-- Debugging
+use 'nvim-lua/plenary.nvim'
+use 'mfussenegger/nvim-dap'
   -- Status line
   use "feline-nvim/feline.nvim"
 use 'shaunsingh/moonlight.nvim'
